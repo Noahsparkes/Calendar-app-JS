@@ -29,6 +29,8 @@ function load() {
  });
  const paddingDays = weekdays.indexOf(dateString.split(',')[0]);
 
+ document.getElementById('monthDisplay').innerText = 
+ `${dt.toLocaleDateString('en-uk',{month: 'long'})} ${year}`;// displaying the month and year ontop of calendar by referncing the monthDisplay id
 
 
  for(let i = 1; i <= paddingDays + daysInMonth; i++){
