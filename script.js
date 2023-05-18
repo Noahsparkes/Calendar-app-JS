@@ -6,6 +6,9 @@ let events = localStorage.getItem("events")
 // if it does not exist in local storage then return an empty array.
 
 const calendar = document.getElementById("calendar"); //reference for the calendar
+
+const newEventModal = document.getElementById("newEventmodal"); // variable for the event modal / not done yet
+const backdrop = document.getElementById("modalBackDrop");
 const weekdays = [
   "Sunday",
   "Monday",
@@ -16,13 +19,25 @@ const weekdays = [
   "Saturday",
 ];
 
+function openModal(date) {
+  clicked = date;
+
+  const eventForDay = events.find((e) => e.date === clicked);
+
+  if (eventForDay) {
+    console.log("Event already exists");
+  } else {
+    newEventModal.style.display = 'block';
+  }
+}
+
 function load() {
   const dt = new Date();
 
   if (nav !== 0) {
-    dt.setDate(1)
+    dt.setDate(1);
     dt.setMonth(new Date().getMonth() + nav);
-  } //
+  } // ths feature broken atm. unable to toggle between months for now
 
   const day = dt.getDate();
   const month = dt.getMonth();

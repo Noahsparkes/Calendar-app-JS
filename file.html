@@ -12,28 +12,36 @@
 
 
         <div id="container">
-         <div id="header">
-            <div id = monthDisplay></div> 
-            <div>
-                <button id ="backButton">Back</button>
-                <button id="nextButton">Next</button>
+            <div id="header">
+                <div id= monthDisplay></div>
+                <div>
+                    <button id="backButton">Back</button>
+                    <button id="nextButton">Next</button>
+                </div>
             </div>
-         </div>
 
-         <div id="weekdays">
-            <div>Sunday</div>
-            <div>Monday</div>
-            <div>Teusday</div>
-            <div>Wednesday</div>
-            <div>Thursday</div>
-            <div>Friday</div>
-            <div>Saturday</div>
-         </div>
+            <div id="weekdays">
+                <div>Sunday</div>
+                <div>Monday</div>
+                <div>Teusday</div>
+                <div>Wednesday</div>
+                <div>Thursday</div>
+                <div>Friday</div>
+                <div>Saturday</div>
+            </div>
 
-
-
-         <div id="calendar"></div>
+            <div id="calendar"></div>
         </div>
+    <!--event modal for addinng and removing events to the calendar-->
+        <div id="newEventModal">
+            <h2 id="">New Event</h2>
+            <input id="eventTitleInput" placeholder="event title" />
+            <button id="saveButton">Save</button>
+            <button id="cancelButton">Cancel</button>
+        </div>
+
+
+        <div id="modalBackDrop"></div>
 
         <script src="./script.js"></script>
     </body>
